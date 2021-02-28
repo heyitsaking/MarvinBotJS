@@ -15,7 +15,7 @@ client.on('message', msg => {
 client.on('messageReactionAdd', (reaction, user) => {
     console.log('a reaction has been added to rules message');
     if (reaction.message.channel.name == "marvin-rules" && 
-        reaction.message.content.includes("CHANNEL RULES")) {
+        reaction.message.content.includes("NEW SERVER MEMBERS")) {
       const marvinRole = reaction.message.guild.roles.cache.find(role => role.name === "Marvin");
       const memberToAssign = reaction.message.guild.members.cache.get(user.id);
       if(memberToAssign.roles.cache.has(marvinRole.id)) {
