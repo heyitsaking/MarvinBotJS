@@ -5,11 +5,13 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  /* Turning off Wednesday bot, keeping code for future templating
   const job = new CronJob('0 0 12 * * 3', function() {
     const channel = client.channels.cache.get('766423834915897387');
     channel.send('Happy hump day! :camel: Screw you Weavy');
   });
   job.start();
+  */
 });
 
 client.on('message', msg => {
